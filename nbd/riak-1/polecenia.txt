@@ -1,0 +1,37 @@
+//1
+curl.exe -i -XPUT -H "Content-Type: application/json" -d '{"name":"Adam","surname":"Adamowicz","graduated":false,"tuition": 5000}' http://localhost:8098/buckets/s23700/keys/adam
+
+curl.exe -i -XPUT -H "Content-Type: application/json" -d '{"name":"Bartosz","surname":"Bartoszewicz","graduated":true,"tuition": 0}'http://localhost:8098/buckets/s23700/keys/bartosz
+
+curl.exe -i -XPUT -H "Content-Type: application/json" -d '{"name":"Cezary","surname":"Cezarewicz","graduated":true,"tuition":1000}' http://localhost:8098/buckets/s23700/keys/cezary
+  
+curl.exe -i -XPUT -H "Content-Type: application/json" -d '{"name":"Damian","surname":"Damianowicz","graduated":false,"tuition": 15000}' http://localhost:8098/buckets/s23700/keys/damian
+  
+curl.exe -i -XPUT -H "Content-Type: application/json" -d '{"name":"Edward","surname":"Edwardowicz","graduated":false,"tuition":55000}' http://localhost:8098/buckets/s23700/keys/edward
+
+//2
+curl.exe -i http://localhost:8098/buckets/s23700/keys/adam
+
+//3
+curl.exe -i -XPUT -H "Content-Type: application/json" -d '{"name":"Adam","surname":"Adamowicz","graduated":false,"tuition": 5000,"birthDate":"2020-01-01"}' http://localhost:8098/buckets/s23700/keys/adam
+
+//4
+curl.exe -i -XPUT -H "Content-Type: application/json" -d '{"name":"Adam","surname":"Adamowicz","tuition": 5000,"birthDate":"2020-01-01"}' http://localhost:8098/buckets/s23700/keys/adam
+
+//5
+curl.exe -i -XPUT -H "Content-Type: application/json" -d '{"name":"Adam","surname":"Adamowicz-Adamowicz","tuition": 5000,"birthDate":"2020-01-01"}' http://localhost:8098/buckets/s23700/keys/adam
+
+//6
+curl.exe -i -XDELETE http://localhost:8098/buckets/s23700/keys/adam
+
+//7
+curl.exe -i http://localhost:8098/buckets/s23700/keys/tumulec
+
+//8
+curl.exe -i -XPUT -H "Content-Type: application/json" -d '{"name":"Adam"}' http://localhost:8098/buckets/s23700/keys
+
+//9
+curl.exe -i http://localhost:8098/buckets/s23700/keys/adam
+
+//10
+curl.exe -i -XDELETE http://localhost:8098/buckets/s23700/keys/adam

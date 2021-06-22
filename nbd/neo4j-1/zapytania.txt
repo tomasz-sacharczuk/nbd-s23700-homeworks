@@ -1,0 +1,54 @@
+1. Wszystkie filmy
+MATCH (movie:Movie)
+RETURN movie
+
+2. Wszystkie filmy, w których grał Hugo Weaving
+MATCH (Person {name: 'Hugo Weaving'})--(movie)
+RETURN movie
+
+3. Reżyserzy filmów, w których grał Hugo Weaving
+MATCH (director:Person)-[:DIRECTED]->(m:Movie)<-[:ACTED_IN]-(person:Person{name: 'Hugo Weaving'})
+RETURN director
+
+4. Wszystkie osoby, z którymi Hugo Weaving grał w tych samych filmach
+MATCH (persons:Person)-[:ACTED_IN]->(m:Movie)<-[:ACTED_IN]-(person:Person{name: 'Hugo Weaving'})
+RETURN persons
+
+5. Wszystkie filmy osób, które grały w Matrix
+MATCH (movie:Movie { title:'The Matrix'})<-[:ACTED_IN]-(person:Person)-[:ACTED_IN]->(movies:Movie)
+RETURN movies
+
+6. Listę aktorów (aktor = osoba, która grała przynajmniej w jednym filmie) wraz z ilością filmów, w których grali
+MATCH (actors:Person)-[m:ACTED_IN]->(movie:Movie) WITH actors, count(m) AS movies
+RETURN actors, movies
+
+7. Listę osób, które napisały scenariusz filmu, które wyreżyserowały wraz z tytułami takich filmów (koniunkcja – ten sam autor scenariusza i reżyser)
+MATCH (person:Person)-[:WROTE]->(movie:Movie) WITH person, movie MATCH (person)-[:DIRECTED]->(movie) RETURN person,movie
+
+8. Listę filmów, w których grał zarówno Hugo Weaving jak i Keanu Reeves
+MATCH (person1: Person {name: "Hugo Weaving"})-[:ACTED_IN]->(movie)<-[:ACTED_IN]-(person2: Person {name: "Keanu Reeves"})
+RETURN movie
+
+9. (za 2pkt) Zestaw zapytań powodujących uzupełnienie bazy danych o film Captain America: The First Avenger wraz z uzupełnieniem informacji o reżyserze, scenarzystach i odtwórcach głównych ról (w oparciu o skrócone informacje z IMDB - http://www.imdb.com/title/tt0458339/) + zapytanie pokazujące dodany do bazy film wraz odtwórcami głównych ról, scenarzystą i reżyserem. Plik SVG ma pokazywać wynik ostatniego zapytania.
+
+CREATE (movie:Movie {title: "Captain America: Pierwsze starcie (2011)"})
+
+CREATE (person:Person {name: "Chris Evans", born: 1981})
+CREATE (person:Person {name: "Hayley Atwell", born: 1982})
+CREATE (person:Person {name: "Sebastian Stan", born: 1982})
+CREATE (person:Person {name: "Christopher Markus", born: 1970})
+CREATE (person:Person {name: "Joe Johnston", born: 1950})
+
+
+MATCH (movie:Movie),(person:Person) WHERE movie.title = "Captain America: Pierwsze starcie (2011)" AND person.name = "Chris Evans" CREATE (person)-[:ACTED_IN]->(movie)
+
+MATCH (movie:Movie),(person:Person) WHERE movie.title = "Captain America: Pierwsze starcie (2011)" AND person.name = "Hayley Atwell" CREATE (person)-[:ACTED_IN]->(movie)
+
+MATCH (movie:Movie),(person:Person) WHERE movie.title = "Captain America: Pierwsze starcie (2011)" AND person.name = "Sebastian Stan" CREATE (person)-[:ACTED_IN]->(movie)
+
+MATCH (movie:Movie),(person:Person) WHERE movie.title = "Captain America: Pierwsze starcie (2011)" AND person.name = "Christopher Markus" CREATE (person)-[:WROTE]->(movie)
+
+MATCH (movie:Movie),(person:Person) WHERE movie.title = "Captain America: Pierwsze starcie (2011)" AND person.name = "Joe Johnston" CREATE (person)-[:DIRECTED]->(movie)
+
+MATCH person=()-[role]->(movie:Movie{title: "Captain America: Pierwsze starcie (2011)"}) RETURN person,role
+

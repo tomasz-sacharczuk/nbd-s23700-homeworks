@@ -1,0 +1,327 @@
+﻿[
+  {
+    "person": {
+"start": {
+"identity": 524,
+"labels": [
+          "Person"
+        ],
+"properties": {
+"name": "Joe Johnston",
+"born": 1950
+        }
+      },
+"end": {
+"identity": 519,
+"labels": [
+          "Movie"
+        ],
+"properties": {
+"title": "Captain America: Pierwsze starcie (2011)"
+        }
+      },
+"segments": [
+        {
+          "start": {
+"identity": 524,
+"labels": [
+              "Person"
+            ],
+"properties": {
+"name": "Joe Johnston",
+"born": 1950
+            }
+          },
+          "relationship": {
+"identity": 765,
+"start": 524,
+"end": 519,
+"type": "DIRECTED",
+"properties": {
+
+            }
+          },
+          "end": {
+"identity": 519,
+"labels": [
+              "Movie"
+            ],
+"properties": {
+"title": "Captain America: Pierwsze starcie (2011)"
+            }
+          }
+        }
+      ],
+"length": 1.0
+    },
+    "role": {
+"identity": 765,
+"start": 524,
+"end": 519,
+"type": "DIRECTED",
+"properties": {
+
+      }
+    }
+  },
+  {
+    "person": {
+"start": {
+"identity": 523,
+"labels": [
+          "Person"
+        ],
+"properties": {
+"name": "Christopher Markus",
+"born": 1970
+        }
+      },
+"end": {
+"identity": 519,
+"labels": [
+          "Movie"
+        ],
+"properties": {
+"title": "Captain America: Pierwsze starcie (2011)"
+        }
+      },
+"segments": [
+        {
+          "start": {
+"identity": 523,
+"labels": [
+              "Person"
+            ],
+"properties": {
+"name": "Christopher Markus",
+"born": 1970
+            }
+          },
+          "relationship": {
+"identity": 764,
+"start": 523,
+"end": 519,
+"type": "WROTE",
+"properties": {
+
+            }
+          },
+          "end": {
+"identity": 519,
+"labels": [
+              "Movie"
+            ],
+"properties": {
+"title": "Captain America: Pierwsze starcie (2011)"
+            }
+          }
+        }
+      ],
+"length": 1.0
+    },
+    "role": {
+"identity": 764,
+"start": 523,
+"end": 519,
+"type": "WROTE",
+"properties": {
+
+      }
+    }
+  },
+  {
+    "person": {
+"start": {
+"identity": 522,
+"labels": [
+          "Person"
+        ],
+"properties": {
+"name": "Sebastian Stan",
+"born": 1982
+        }
+      },
+"end": {
+"identity": 519,
+"labels": [
+          "Movie"
+        ],
+"properties": {
+"title": "Captain America: Pierwsze starcie (2011)"
+        }
+      },
+"segments": [
+        {
+          "start": {
+"identity": 522,
+"labels": [
+              "Person"
+            ],
+"properties": {
+"name": "Sebastian Stan",
+"born": 1982
+            }
+          },
+          "relationship": {
+"identity": 763,
+"start": 522,
+"end": 519,
+"type": "ACTED_IN",
+"properties": {
+
+            }
+          },
+          "end": {
+"identity": 519,
+"labels": [
+              "Movie"
+            ],
+"properties": {
+"title": "Captain America: Pierwsze starcie (2011)"
+            }
+          }
+        }
+      ],
+"length": 1.0
+    },
+    "role": {
+"identity": 763,
+"start": 522,
+"end": 519,
+"type": "ACTED_IN",
+"properties": {
+
+      }
+    }
+  },
+  {
+    "person": {
+"start": {
+"identity": 521,
+"labels": [
+          "Person"
+        ],
+"properties": {
+"name": "Hayley Atwell",
+"born": 1982
+        }
+      },
+"end": {
+"identity": 519,
+"labels": [
+          "Movie"
+        ],
+"properties": {
+"title": "Captain America: Pierwsze starcie (2011)"
+        }
+      },
+"segments": [
+        {
+          "start": {
+"identity": 521,
+"labels": [
+              "Person"
+            ],
+"properties": {
+"name": "Hayley Atwell",
+"born": 1982
+            }
+          },
+          "relationship": {
+"identity": 762,
+"start": 521,
+"end": 519,
+"type": "ACTED_IN",
+"properties": {
+
+            }
+          },
+          "end": {
+"identity": 519,
+"labels": [
+              "Movie"
+            ],
+"properties": {
+"title": "Captain America: Pierwsze starcie (2011)"
+            }
+          }
+        }
+      ],
+"length": 1.0
+    },
+    "role": {
+"identity": 762,
+"start": 521,
+"end": 519,
+"type": "ACTED_IN",
+"properties": {
+
+      }
+    }
+  },
+  {
+    "person": {
+"start": {
+"identity": 520,
+"labels": [
+          "Person"
+        ],
+"properties": {
+"name": "Chris Evans",
+"born": 1981
+        }
+      },
+"end": {
+"identity": 519,
+"labels": [
+          "Movie"
+        ],
+"properties": {
+"title": "Captain America: Pierwsze starcie (2011)"
+        }
+      },
+"segments": [
+        {
+          "start": {
+"identity": 520,
+"labels": [
+              "Person"
+            ],
+"properties": {
+"name": "Chris Evans",
+"born": 1981
+            }
+          },
+          "relationship": {
+"identity": 761,
+"start": 520,
+"end": 519,
+"type": "ACTED_IN",
+"properties": {
+
+            }
+          },
+          "end": {
+"identity": 519,
+"labels": [
+              "Movie"
+            ],
+"properties": {
+"title": "Captain America: Pierwsze starcie (2011)"
+            }
+          }
+        }
+      ],
+"length": 1.0
+    },
+    "role": {
+"identity": 761,
+"start": 520,
+"end": 519,
+"type": "ACTED_IN",
+"properties": {
+
+      }
+    }
+  }
+]
