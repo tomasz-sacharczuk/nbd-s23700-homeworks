@@ -1,0 +1,4 @@
+Fetched student:{"name":"Adam","surname":"Adamowicz","graduaded":false,"tuition":5000}
+Modified student: {"name":"Adam","surname":"Adamowicz","graduaded":false,"tuition":0}
+Key: adam successfully removed 
+No match for key: adam
